@@ -1,0 +1,60 @@
+# CentOS-Base.repo
+#
+# CentOS-4 is past End of Life ... use at your own risk
+#
+
+[base]
+name=CentOS-$releasever - Base
+baseurl=http://vault.centos.org/4.9/os/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/RPM-GPG-KEY-centos4
+protect=1
+priority=1
+
+#released updates 
+[update]
+name=CentOS-$releasever - Updates
+baseurl=http://vault.centos.org/4.9/updates/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/RPM-GPG-KEY-centos4
+protect=1
+priority=1
+
+#packages used/produced in the build but not released
+[addons]
+name=CentOS-$releasever - Addons
+baseurl=http://vault.centos.org/4.9/addons/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/RPM-GPG-KEY-centos4
+protect=1
+priority=1
+
+#additional packages that may be useful
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=http://vault.centos.org/4.9/extras/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/RPM-GPG-KEY-centos4
+protect=1
+priority=1
+
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-$releasever - Plus
+baseurl=http://vault.centos.org/4.9/centosplus/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://vault.centos.org/RPM-GPG-KEY-centos4
+protect=1
+priority=2
+
+#contrib - packages by Centos Users
+[contrib]
+name=CentOS-$releasever - Contrib
+baseurl=http://vault.centos.org/4.9/contrib/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://vault.centos.org/RPM-GPG-KEY-centos4
+protect=1
+priority=2
+
